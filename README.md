@@ -1,4 +1,4 @@
-# TerminalSimulator
+# Web Based SSH Client
 This is a demo web based SSH Client. 
 
 # Prerequisites
