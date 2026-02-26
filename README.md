@@ -23,6 +23,3 @@ This is a demo web based SSH Client.
 
 # Example interaction
 * Please watch the sample-interaction.webm file
-<video src="./sample-interaction.webm" width="800" height="800" controls>
-  Your browser does not support the video tag.
-</video>
