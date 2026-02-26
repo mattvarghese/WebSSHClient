@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Full Stack (Client + Server)",
+      "configurations": ["Backend", "Frontend"]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Backend",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-server",
+      "program": "${workspaceFolder}/WebApp.Server/bin/Debug/net8.0/WebApp.Server.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/WebApp.Server",
+      "env": {
+        "ASPNETCORE_URLS": "https://localhost:7071",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https://\\S+)",
+        "uriFormat": "%s/api/ack"
+      }
+    },
+    {
+      "name": "Frontend",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://localhost:53966",
+      "webRoot": "${workspaceFolder}/webapp.client",
+      "outFiles": ["${workspaceFolder}/webapp.client/src/**/*.js"],
+      "sourceMaps": true,
+      "trace": true,
+      "preLaunchTask": "npm: start-client",
+    }
+  ]
+}
