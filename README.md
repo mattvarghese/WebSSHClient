@@ -20,3 +20,6 @@ This is a demo web based SSH Client.
 * Go to the Run and Debug tab on the left
 * At the top, click the drop down to select "Full Stack (Client + Server)"
 * Click the green run button
+
+# Example interaction
+* Please watch the sample-interaction.webm file
